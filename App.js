@@ -3,19 +3,20 @@ import { StyleSheet, Text, View } from 'react-native';
 // import AreaChartExample from './src/area-chart';
 // import BarChart from './src/bar-chart/bar-chart';
 // import { Circle } from './src/svg-example/circle';
-import AnimatedPath from './examples/path';
 import Pie from './d3/example/pie';
+import RnPath from './rn-svg/path';
+import AnimatedPath from './rn-svg/animated-path';
 
 export default function App() {
   console.log('=-=--');
   return (
     <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
+      {/* <Text>Open up App.js to start working on your app!</Text> */}
       <StatusBar style="auto" />
       {/* <AreaChartExample /> */}
       {/* <BarChart /> */}
       {/* <Circle /> */}
-      <Pie />
+      {/* <Pie /> */}
       {/* <AnimatedPath
         animate={true}
         animateDuration={1110}
@@ -27,6 +28,8 @@ export default function App() {
         stroke={'#8B1A4B'}
         strokeWidth={1}
       /> */}
+      {/* <RnPath /> */}
+      <AnimatedPath/>
     </View>
   );
 }
