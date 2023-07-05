@@ -21,7 +21,8 @@
     "react-native": "0.71.8",
     "react-native-reanimated": "~2.14.4",
     "react-native-svg": "13.4.0",
-    "react-native-svg-charts": "^5.4.0"
+    "react-native-svg-charts": "^5.4.0",
+    "svg-path-properties": "^1.2.0"
   },
   "devDependencies": {
     "@babel/core": "^7.20.0"
