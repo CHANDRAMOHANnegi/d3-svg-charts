@@ -17,7 +17,7 @@ export default function App() {
           justifyContent: "center",
         }}
       >
-        <RnSVG />
+        {/* <RnSVG /> */}
         <Chart />
       </ScrollView>
     </View>

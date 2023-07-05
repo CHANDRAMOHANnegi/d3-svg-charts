@@ -7,7 +7,7 @@ export default function index() {
   return (
     <>
       <DecoratorExample />
-      <BarChart />
+      {/* <BarChart /> */}
     </>
   );
 }
