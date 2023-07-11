@@ -2,6 +2,7 @@ import { StatusBar } from "expo-status-bar";
 import { ScrollView, StyleSheet, Text, View } from "react-native";
 import Chart from "./charts";
 import RnSVG from "./rn-svg";
+import D3Axis from "./d3/d3-axis";
 
 export default function App() {
   console.log("=-=--");
@@ -19,6 +20,7 @@ export default function App() {
       >
         {/* <RnSVG /> */}
         <Chart />
+        {/* <D3Axis /> */}
       </ScrollView>
     </View>
   );
