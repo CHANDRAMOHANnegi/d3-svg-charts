@@ -1,13 +1,7 @@
 import React from "react";
-import { BarChart as BC, Grid } from "react-native-svg-charts";
-import Gradient from "../../rn-svg/components/Gradient";
-
-const DATA = [
-  {
-    value: 332646444,
-    timeInterval: "Default Department",
-  },
-];
+import { BarChart as BC } from "react-native-svg-charts";
+import { CustomGrid } from "../components/grid";
+import { CustomGradient } from "../components/gradient";
 
 function BarChart() {
   const data = [50, 10, 40];
@@ -22,8 +16,8 @@ function BarChart() {
         fill: "url(#gradient)",
       }}
     >
-      <Grid />
-      <Gradient />
+      <CustomGrid />
+      <CustomGradient />
     </BC>
   );
 }

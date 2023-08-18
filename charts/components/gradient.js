@@ -1,10 +1,9 @@
 import React from "react";
-import { StyleSheet, Text, View } from "react-native";
 import { Defs, LinearGradient, Stop, G } from "react-native-svg";
 
 const G_C = ["rgba(44,56,188,1)", "rgba(0,118,190,1)"];
 
-export default function Gradient({ gradientColors = G_C }) {
+export function CustomGradient({ gradientColors = G_C }) {
   return (
     <G>
       <Defs key={"gradient"}>
@@ -22,5 +21,3 @@ export default function Gradient({ gradientColors = G_C }) {
     </G>
   );
 }
-
-const styles = StyleSheet.create({});

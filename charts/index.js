@@ -8,10 +8,10 @@ import BasicChart from "./basic-chart/chart";
 export default function index() {
   return (
     <>
-      {/* <DecoratorExample /> */}
+      <DecoratorExample />
       {/* <RevolutChart /> */}
       {/* <BarChart /> */}
-      <BasicChart />
+      {/* <BasicChart /> */}
     </>
   );
 }

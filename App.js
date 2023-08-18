@@ -3,6 +3,8 @@ import { ScrollView, StyleSheet, Text, View } from "react-native";
 import Chart from "./charts";
 import RnSVG from "./rn-svg";
 import D3Axis from "./d3/d3-axis";
+import Pie from "./d3/example/pie";
+import Line from "./d3/example/line/line";
 
 export default function App() {
   console.log("=-=--");
@@ -19,8 +21,10 @@ export default function App() {
         }}
       >
         {/* <RnSVG /> */}
-        <Chart />
+        {/* <Line /> */}
+        {/* <Pie /> */}
         {/* <D3Axis /> */}
+        <Chart />
       </ScrollView>
     </View>
   );

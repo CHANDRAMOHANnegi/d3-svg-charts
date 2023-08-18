@@ -1,9 +1,13 @@
 import React from "react";
-import { AreaChart, Grid, XAxis } from "react-native-svg-charts";
-import { Circle, Path } from "react-native-svg";
+import { AreaChart, XAxis } from "react-native-svg-charts";
+import { Path, G } from "react-native-svg";
 import * as scale from "d3-scale";
-import Gradient from "../../rn-svg/components/Gradient";
 import { setHours, format } from "date-fns";
+// import { Decorator } from "../components/decorator";
+// import { CustomGrid } from "../components/grid";
+import { CustomGrid } from "../components/grid";
+import { CustomGradient } from "../components/gradient";
+import { CustomDecorator } from "../components/decorator";
 
 const data = [
   {
@@ -33,40 +37,6 @@ const data = [
 ];
 
 const Line = ({ line }) => <Path d={line} stroke={"red"} fill={"none"} />;
-
-const Decorator = ({ x, y, data }) => {
-  // console.log(x(data[0].date), y, data);
-  return data.map((value, index) => {
-    const X = x(value.date);
-    const Y = y(value.value);
-
-    console.log(index, X, Y, value);
-
-    return (
-      <>
-        <Circle
-          key={index}
-          cx={x(value.date)}
-          cy={y(0)}
-          // scale={scale.scaleTime}
-          r={4} ///
-          stroke={"red"}
-          fill={"white"}
-        />
-        <Circle
-          key={index}
-          cx={x(value.date)}
-          cy={y(value.value)}
-          // scale={scale.scaleTime}
-          r={4} ///
-          stroke={"green"}
-          fill={"yellow"}
-        />
-      </>
-    );
-  });
-};
-
 class Chart extends React.PureComponent {
   render() {
     console.log("-=-=-=--datat===", data);
@@ -82,15 +52,15 @@ class Chart extends React.PureComponent {
           xScale={scale.scaleTime}
           // curve={shape.curveBasis}
         >
-          <Grid />
+          <CustomGrid />
           <Line />
-          <Gradient
+          <CustomGradient
             gradientColors={[
               "rgba(134, 65, 244,0.3)",
               "rgba(134, 65, 244, 0.1)",
             ]}
           />
-          <Decorator />
+          <CustomDecorator />
         </AreaChart>
         <XAxis
           data={data}
@@ -98,7 +68,7 @@ class Chart extends React.PureComponent {
             fill: "black",
             fontSize: 8,
             fontWeight: "bold",
-            rotation: 20,
+            // rotation: 20,
             originY: 30,
             y: 5,
           }}

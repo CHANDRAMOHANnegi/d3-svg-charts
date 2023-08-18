@@ -1,9 +1,8 @@
-import { View, Text } from "react-native";
 import React from "react";
 import * as shape from "d3-shape";
-import { Svg, Path, G, Defs, LinearGradient, Stop } from "react-native-svg";
-import Gradient from "../components/Gradient";
+import { Path } from "react-native-svg";
 import SvgContainer from "../../components/svg-container";
+
 const data = [
   { number: 8, name: "Fun activities" },
   { number: 7, name: "Dog" },
@@ -25,7 +24,6 @@ const colors = [
   "#17becf",
 ];
 export default function Pie() {
-
   const arcs = shape.pie().value((a) => a.number)(data);
 
   const pieSlices = arcs.map((slice, index) => ({
